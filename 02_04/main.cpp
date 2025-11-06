@@ -7,7 +7,7 @@
 #include <functional>
 
 
-void DelayReveal(void(*fn)(int,int),unsigned int delayMs, int roll, int userGuess);
+//void DelayReveal(void(*fn)(int,int),unsigned int delayMs, int roll, int userGuess);
 
 //void ShowResult(int roll, int userGuess){
 //	wprintf(L"出目は%dでした。\n", roll );
@@ -29,7 +29,14 @@ int main(int argc,const char * argv[]){
 		}else{
 			wprintf(L"不正解\n" );
 		}
+	};
+
+	auto DelayReveal = [](std::function<void(int,int)> fn, unsigned int delayMs, int roll, int userGuess) {
+		Sleep(delayMs);
+		fn(roll, userGuess);
 		};
+
+
 	srand((unsigned int)time(NULL));
 	int userGuess=-1;
 
@@ -43,7 +50,7 @@ int main(int argc,const char * argv[]){
 	return 0;
 }
 
-void DelayReveal(void(*fn)(int,int),unsigned int delayMs, int roll, int userGuess){
-	Sleep(delayMs);
-	fn(roll, userGuess);
+//void DelayReveal(void(*fn)(int,int),unsigned int delayMs, int roll, int userGuess){
+//	Sleep(delayMs);
+//	fn(roll, userGuess);
 	
