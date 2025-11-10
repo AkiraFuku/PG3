@@ -19,7 +19,11 @@ void ShowResult(int roll, int userGuess){
 }
 
 int main(){
-	_setmode(_fileno(stdout), _O_U16TEXT);
+	int modeResult = _setmode(_fileno(stdout), _O_U16TEXT);
+	if (modeResult == -1) {
+		fwprintf(stderr, L"_setmode に失敗しました。\n");
+		return 1;
+	}
 	srand((unsigned int)time(NULL));
 	int userGuess=-1;
 
