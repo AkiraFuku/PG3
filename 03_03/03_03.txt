@@ -1,0 +1,2 @@
+基底クラスが災害（Disaster）
+派生クラスが地震（Earthquake）、嵐（Storm）
