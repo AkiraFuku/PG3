@@ -1,5 +1,9 @@
 #include "GameMnager.h"
 #include<Novice.h>
+#include "InputManager.h"
+
+InputManager* inputManager;
+
 GameMnager::GameMnager()
 {
 	sceneArr_[TITLE]=std::make_unique<TitleScene>();
@@ -19,6 +23,7 @@ int GameMnager::Run()
 
 		Novice::BeginFrame();
 		
+		inputManager->Update();
 		prevSceneNo_ = currentSceneNo_;
 		currentSceneNo_ = sceneArr_[currentSceneNo_]->GetSceneNo();
 
@@ -28,8 +33,10 @@ int GameMnager::Run()
 		sceneArr_[currentSceneNo_]->Update();
 		sceneArr_[currentSceneNo_]->Draw();
 		Novice::EndFrame();
-		if (Novice::)
+		if (inputManager->GetKeys()[DIK_ESCAPE]==0&&
+			inputManager->GetPreKeys()[DIK_ESCAPE]!=0)
 		{
+			break;
 
 		}
 	}
