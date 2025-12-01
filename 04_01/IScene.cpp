@@ -1,9 +1,9 @@
-#include "IsScene.h"
+#include "IScene.h"
 #include "Enemy.h"
 
-int IsScene::sceneNo = TITLE;
+int IScene::sceneNo = TITLE;
 
-IsScene::~IsScene(){}
+IScene::~IScene(){}
 
 
 /// <summary>

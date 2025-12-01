@@ -17,7 +17,7 @@ typedef struct Background {
 	Vector2 pos;
 	int graphHandle;
 } Background;
-class IsScene {
+class IScene {
 protected:
 	//　シーン番号
 	static int sceneNo;
@@ -26,7 +26,7 @@ public:
 	virtual void Update() = 0;
 	virtual void Draw() = 0;
 
-	virtual ~IsScene() = default;
+	virtual ~IScene() = default;
 
 	int GetSceneNo() const {
 		return sceneNo;

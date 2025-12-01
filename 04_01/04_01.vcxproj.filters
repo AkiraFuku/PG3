@@ -14,6 +14,12 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="obj">
+      <UniqueIdentifier>{0aa3927a-20c6-4de0-b107-e18952b5bb50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{9c3d5091-ea87-407e-803b-9bd3a9520589}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -21,25 +27,37 @@
       <Filter>KamataEngine\Adapter</Filter>
     </ClCompile>
     <ClCompile Include="Bullet.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>obj</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="Graph.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>obj</Filter>
     </ClCompile>
     <ClCompile Include="Obj.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>obj</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>obj</Filter>
     </ClCompile>
-    <ClCompile Include="IsScene.cpp">
-      <Filter>KamataEngine</Filter>
+    <ClCompile Include="Graph.cpp">
+      <Filter>obj</Filter>
     </ClCompile>
     <ClCompile Include="Scoer.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>obj</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMnager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="IScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="StageScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CrearScene.cpp">
+      <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,12 +142,38 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Graph.h" />
-    <ClInclude Include="Obj.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="IsScene.h" />
-    <ClInclude Include="Scoer.h" />
+    <ClInclude Include="Bullet.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Scoer.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="IScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMnager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="StageScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CrearScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
