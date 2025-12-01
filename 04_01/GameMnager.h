@@ -8,6 +8,7 @@ class GameMnager
 {
 private:
 	std::unique_ptr<IScene> sceneArr_[3];
+	std::unique_ptr<InputManager> inputManager;
 	int currentSceneNo_;
 	int prevSceneNo_;
 public:

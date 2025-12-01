@@ -2,7 +2,7 @@
 #include<Novice.h>
 #include "InputManager.h"
 
-InputManager* inputManager;
+
 
 GameMnager::GameMnager()
 {
