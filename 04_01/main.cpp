@@ -1,6 +1,6 @@
 #include <Novice.h>
 #include<time.h>
-#include"Scene.h"
+#include"IScene.h"
 
 
 
@@ -23,7 +23,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	srand(unsigned int(time(nullptr)));
 	
 	
-	isScene* scene=new isScene;
+	
 
 	//int whi=Novice::LoadTexture("./NoviceResources/white1x1.png");
 
@@ -40,7 +40,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		/// 
 
-		scene->Update(keys, preKeys);
+		
 		///
 		/// ↑更新処理ここまで
 		///
@@ -48,7 +48,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
-		scene->Draw();
+		
 		
 
 		///
@@ -64,7 +64,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		}
 
 	}
-	delete scene;
+
 		// ライブラリの終了
 		Novice::Finalize();
 		return 0;

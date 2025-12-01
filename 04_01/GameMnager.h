@@ -7,6 +7,12 @@
 class GameMnager
 {
 private:
-
+	std::unique_ptr<IScene> sceneArr_[3];
+	int currentSceneNo_;
+	int prevSceneNo_;
+public:
+	GameMnager();
+	~GameMnager();
+	int Run();
 };
 

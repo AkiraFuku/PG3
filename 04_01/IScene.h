@@ -10,8 +10,8 @@
 
 enum SCENE{
 		TITLE,
-		GAME,
-		GAMEOVER,
+		STAGE,
+		CLEAR,
 	};
 typedef struct Background {
 	Vector2 pos;
