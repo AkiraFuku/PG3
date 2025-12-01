@@ -23,7 +23,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	srand(unsigned int(time(nullptr)));
 	
 	
-	Scene* scene=new Scene;
+	isScene* scene=new isScene;
 
 	//int whi=Novice::LoadTexture("./NoviceResources/white1x1.png");
 

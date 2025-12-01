@@ -35,7 +35,7 @@
     <ClCompile Include="Player.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
+    <ClCompile Include="IsScene.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
     <ClCompile Include="Scoer.cpp">
@@ -129,7 +129,7 @@
     <ClInclude Include="Graph.h" />
     <ClInclude Include="Obj.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="Scene.h" />
+    <ClInclude Include="IsScene.h" />
     <ClInclude Include="Scoer.h" />
   </ItemGroup>
 </Project>
