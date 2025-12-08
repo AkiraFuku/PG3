@@ -13,6 +13,8 @@ float Lengeth(Vector2 vector2);
 float Lengeth(Vector2 posA,Vector2 posB);
 Vector2 Normarize(Vector2 vector2);
 
+
+
 class Obj {
 public:
 	/// <summary>
