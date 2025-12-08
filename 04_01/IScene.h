@@ -1,12 +1,11 @@
 #pragma once
+#include <KamataEngine.h>
 #include <Novice.h>
 #include <math.h>
 #include<stdlib.h>
-#include<time.h>
-#include"Scoer.h"
-#include "Player.h"
-#include "Enemy.h"
 
+#include"Scoer.h"
+using namespace KamataEngine;
 
 enum SCENE{
 		TITLE,
@@ -21,6 +20,8 @@ class IScene {
 protected:
 	//　シーン番号
 	static int sceneNo;
+	int numberGraphs_[10];
+
 public:
 	virtual void Init()=0;
 	virtual void Update() = 0;
@@ -31,6 +32,7 @@ public:
 	int GetSceneNo() const {
 		return sceneNo;
 	}
+	void numberDraw(Vector2 pos,int width,int i);
 private:
 	//int frameCount_;
 	//int timer_;
@@ -38,7 +40,6 @@ private:
 	//int BgHandle_;
 	//int playHandle_;
 	//Background backGround_[2];
-	//int numberGraphs_[10];
 
 
 	//Player* player_;
@@ -47,12 +48,12 @@ private:
 	//unsigned int endGraph_;
 	//unsigned int akaDaikonn_;
 	//unsigned int uiGlaph_;
-	//std::vector<int> numberArray_[3];
+	std::vector<int> numberArray_[3];
 
-	/*isScene();
-	~isScene();
-	void numberDraw(Vector2 pos,int width,int i);
-	void Update(const char* keys,const char*preKeys);
-	void Draw();
-	int scene_;*/
+	//isScene();
+	//~isScene();
+	
+	//void Update(const char* keys,const char*preKeys);
+	//void Draw();
+	//int scene_;
 };

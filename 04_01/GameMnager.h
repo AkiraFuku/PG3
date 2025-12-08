@@ -12,6 +12,8 @@ private:
 	int currentSceneNo_;
 	int prevSceneNo_;
 public:
+
+
 	GameMnager();
 	~GameMnager();
 	int Run();

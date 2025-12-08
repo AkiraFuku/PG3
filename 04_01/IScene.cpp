@@ -48,31 +48,22 @@ IScene::~IScene(){}
 //	
 //}
 //
-///// <summary>
-///// シーンのデストラクタ
-///// </summary>
-//isScene::~isScene() { 
-//	delete player_;
-//	for (int i = 0; i < 10; i++) {
-//		delete enemy_[i];
-//	}
-//	
-//}
-///// <summary>
-///// numberDraw
-///// </summary>
-///// <param name="pos">ポジション </param>
-///// <param name="width">幅</param>
-///// <param name="i">リスト番号</param>
-//void isScene::numberDraw(Vector2 pos,int width,int i ) {
-//	int digit=static_cast<int>( numberArray_[i].size());
-//	for (int j = 0; j < digit; j++) {
-//		Novice::DrawSprite(
-//			static_cast<int>(pos.x)+j*width,static_cast<int>(pos.y), numberGraphs_[numberArray_[i][j]], 1.0f, 1.0f, 0.0f, WHITE
-//		);
-//	}
-//	
-//};
+
+/// <summary>
+/// numberDraw
+/// </summary>
+/// <param name="pos">ポジション </param>
+/// <param name="width">幅</param>
+/// <param name="i">リスト番号</param>
+void IScene::numberDraw(Vector2 pos,int width,int i ) {
+	int digit=static_cast<int>( numberArray_[i].size());
+	for (int j = 0; j < digit; j++) {
+		Novice::DrawSprite(
+			static_cast<int>(pos.x)+j*width,static_cast<int>(pos.y), numberGraphs_[numberArray_[i][j]], 1.0f, 1.0f, 0.0f, WHITE
+		);
+	}
+	
+};
 //
 //
 //
