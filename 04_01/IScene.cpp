@@ -4,20 +4,21 @@ int IScene::sceneNo_ = TITLE;
 
 IScene::~IScene(){}
 
-int IScene::numberGraphs_[10] = {
-	Novice::LoadTexture("./Resources/images/nungrph/0.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/1.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/2.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/3.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/4.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/5.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/6.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/7.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/8.png"),
-	Novice::LoadTexture("./Resources/images/nungrph/9.png"),
-};
+int IScene::numberGraphs_[10] = {0};
+void IScene::LoadResources() {
+    numberGraphs_[0] = Novice::LoadTexture("./Resources/images/nungrph/0.png");
+    numberGraphs_[1] = Novice::LoadTexture("./Resources/images/nungrph/1.png");
+    numberGraphs_[2] = Novice::LoadTexture("./Resources/images/nungrph/2.png");
+    numberGraphs_[3] = Novice::LoadTexture("./Resources/images/nungrph/3.png");
+    numberGraphs_[4] = Novice::LoadTexture("./Resources/images/nungrph/4.png");
+    numberGraphs_[5] = Novice::LoadTexture("./Resources/images/nungrph/5.png");
+    numberGraphs_[6] = Novice::LoadTexture("./Resources/images/nungrph/6.png");
+    numberGraphs_[7] = Novice::LoadTexture("./Resources/images/nungrph/7.png");
+    numberGraphs_[8] = Novice::LoadTexture("./Resources/images/nungrph/8.png");
+    numberGraphs_[9] = Novice::LoadTexture("./Resources/images/nungrph/9.png");
+}
 
-void IScene::numberDraw(Vector2 pos, int width, int i, const std::vector<int>& numberArray) {
+void IScene::numberDraw(Vector2 pos, int width, const std::vector<int>& numberArray) {
 	for (int j = 0; j <static_cast<int>( numberArray.size()); ++j) {
 		int digit = numberArray[j];
 		Novice::DrawSprite(static_cast<int>(pos.x) + width * static_cast<int>(j),

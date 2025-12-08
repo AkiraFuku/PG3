@@ -45,6 +45,8 @@ void StageScene::Init() {
 }
 
 void StageScene::Update(char* keys, char* preKeys) {
+
+	preKeys;
 	// BGM再生
 	if (!Novice::IsPlayingAudio(playHandle_)) {
 		playHandle_ = Novice::PlayAudio(bgHandle_, true, 0.5f);
@@ -147,8 +149,8 @@ void StageScene::Draw() {
 	Novice::DrawSprite(1280, 0, uiGraph_, 1.0f, 1.0f, 0.0f, WHITE); // kStageWidth
 	
 	// 数値描画 (ISceneの機能を使用)
-	numberDraw({ 890.0f, 350.0f }, 40, 2); // スコア
-	numberDraw({ 890.0f, 250.0f }, 40, 1); // タイマー
+	numberDraw({ 890.0f, 350.0f }, 40,numberArray_[2]); // スコア
+	numberDraw({ 890.0f, 250.0f }, 40, numberArray_[1]); // タイマー
 
 	// ライフ描画
 	for (int i = 0; i < player_->GetLife(); i++) {

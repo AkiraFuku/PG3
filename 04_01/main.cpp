@@ -1,6 +1,6 @@
 #include <Novice.h>
 #include<time.h>
-#include"Scene.h"
+#include "GameManager.h"
 
 
 
@@ -17,30 +17,33 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		Novice::Initialize(kWindowTitle, 1280, 720);
 
 			// キー入力結果を受け取る箱
-	char keys[256] = { 0 };
-	char preKeys[256] = { 0 };
+	/*char keys[256] = { 0 };
+	char preKeys[256] = { 0 };*/
 	///変数
 	srand(unsigned int(time(nullptr)));
 	
+	GameManager* gameManager=nullptr;
+	gameManager=new GameManager();
+
 	
-	Scene* scene=new Scene;
 
 	//int whi=Novice::LoadTexture("./NoviceResources/white1x1.png");
 
-	// ウィンドウの×ボタンが押されるまでループ
-	while (Novice::ProcessMessage() == 0) {
-		// フレームの開始
-		Novice::BeginFrame();
+	//// ウィンドウの×ボタンが押されるまでループ
+	//while (Novice::ProcessMessage() == 0) {
+	//	// フレームの開始
+	//	Novice::BeginFrame();
 
-		// キー入力を受け取る
-		memcpy(preKeys, keys, 256);
-		Novice::GetHitKeyStateAll(keys);
+	//	// キー入力を受け取る
+	//	memcpy(preKeys, keys, 256);
+	//	Novice::GetHitKeyStateAll(keys);
 
 		///
 		/// ↓更新処理ここから
 		/// 
 
-		scene->Update(keys, preKeys);
+		gameManager->Run();
+		
 		///
 		/// ↑更新処理ここまで
 		///
@@ -48,23 +51,23 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
-		scene->Draw();
-		
+	
 
 		///
 		/// ↑描画処理ここまで
 		///
 
-		// フレームの終了
-		Novice::EndFrame();
+	//	// フレームの終了
+	//	Novice::EndFrame();
 
-		// ESCキーが押されたらループを抜ける
-		if (preKeys[DIK_ESCAPE] == 0 && keys[DIK_ESCAPE] != 0) {
-			break;
-		}
+	//	// ESCキーが押されたらループを抜ける
+	//	if (preKeys[DIK_ESCAPE] == 0 && keys[DIK_ESCAPE] != 0) {
+	//		break;
+	//	}
 
-	}
-	delete scene;
+	//}
+		delete gameManager;
+	
 		// ライブラリの終了
 		Novice::Finalize();
 		return 0;

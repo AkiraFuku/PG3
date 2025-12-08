@@ -33,8 +33,8 @@ void ClearScene::Draw() {
 	// 第3引数は numberArray_ のインデックス
 	
 	// 今回のスコア 
-	numberDraw({ 300.0f, 500.0f }, 40, 2,numberArray_[2]);
+	numberDraw({ 300.0f, 500.0f }, 40, numberArray_[2]);
 
 	// ハイスコア 
-	numberDraw({ 300.0f, 300.0f }, 40, 0,numberArray_[0]);
+	numberDraw({ 300.0f, 300.0f }, 40, numberArray_[0]);
 }

@@ -41,7 +41,7 @@ class IScene
 	int GetSceneNo() const { return sceneNo_; }
 
     // 共通機能：数字描画 (実装はcppで行う)
-    void numberDraw(Vector2 pos, int width, int i, const std::vector<int>& numberArray);
-
+    void numberDraw(Vector2 pos, int width, const std::vector<int>& numberArray);
+	static void LoadResources();
 };
 
