@@ -10,6 +10,12 @@ enum SCENE {
 	STAGE,
 	CLEAR,
 };
+
+typedef struct Background {
+	Vector2 pos;
+	int graphHandle;
+} Background;
+
 class IScene
 {
 	protected:
