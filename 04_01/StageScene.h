@@ -6,7 +6,7 @@
 
 class StageScene : public IScene {
 public:
-	StageScene();
+	
 	~StageScene() override;
 
 	void Init() override;
@@ -19,10 +19,10 @@ private:
 	Enemy* enemy_[10];
 
 	// リソースハンドル
-	int bgHandle_;      // BGM
-	int playHandle_;    // 再生中の音声ハンドル
-	int uiGraph_;       // リセットUIなど
-	int lifeGraph_;     // 体力表示用（赤大根）
+	int bgHandle_=-1;      // BGM
+	int playHandle_=-1;    // 再生中の音声ハンドル
+	int uiGraph_=-1;       // リセットUIなど
+	int lifeGraph_=-1;     // 体力表示用（赤大根）
 	Background backGround_[2]; // 背景
 
 	// ゲームステート管理

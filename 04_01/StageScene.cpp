@@ -2,13 +2,7 @@
 #include "ClearScene.h" // スコア受け渡しのためにインクルード
 #include <Novice.h>
 
-StageScene::StageScene() {
-	// メモリ確保
-	player_ = new Player();
-	for (int i = 0; i < 10; i++) {
-		enemy_[i] = new Enemy();
-	}
-}
+
 
 StageScene::~StageScene() {
 	// メモリ解放
@@ -20,7 +14,10 @@ StageScene::~StageScene() {
 
 void StageScene::Init() {
 	sceneNo_ = STAGE;
-
+player_ = new Player();
+	for (int i = 0; i < 10; i++) {
+		enemy_[i] = new Enemy();
+	}
 	// テクスチャ読み込み
 	uiGraph_ = Novice::LoadTexture("./Resources/images/reseet.png");
 	lifeGraph_ = Novice::LoadTexture("./Resources/images/lifedaikonn.png");
@@ -146,7 +143,7 @@ void StageScene::Draw() {
 	player_->Draw();
 
 	// UI描画
-	Novice::DrawSprite(1280, 0, uiGraph_, 1.0f, 1.0f, 0.0f, WHITE); // kStageWidth
+	Novice::DrawSprite(700, 0, uiGraph_, 1.0f, 1.0f, 0.0f, WHITE); // kStageWidth
 	
 	// 数値描画 (ISceneの機能を使用)
 	numberDraw({ 890.0f, 350.0f }, 40,numberArray_[2]); // スコア

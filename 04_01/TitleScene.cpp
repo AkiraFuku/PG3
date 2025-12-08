@@ -13,4 +13,5 @@ void TitleScene::Update(char* keys, char* preKeys) {
 
 void TitleScene::Draw() {
     Novice::DrawSprite(0, 0, titleGraph_, 1.0f, 1.0f, 0.0f, 0xFFFFFFFF);
+
 }
