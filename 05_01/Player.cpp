@@ -1,8 +1,15 @@
 #include "Player.h"
+#include "Novice.h"
+void Player::Init(){
 
-void Player::Init(){}
+	pos_={50.0f,100.0f};
+}
 void Player::Update(){}
-void Player::Draw(){}
+void Player::Draw(){
+
+	Novice::DrawBox(static_cast<int>(pos_.x-radius),static_cast<int>(pos_.y-radius),static_cast<int>(radius*2.0f),static_cast<int>(radius*2.0f),0.0f,WHITE,kFillModeSolid);
+
+}
 
 void Player::MoveRight()
 {

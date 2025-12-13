@@ -1,21 +1,25 @@
-#include "ImputHandler.h"
+#include "InputHandler.h"
 #include "Novice.h"
-ICommand* ImputHandler::HandleInput()
+ICommand* InputHandler::HandleInput()
 {
 	if (Novice::CheckHitKey(DIK_D))
 	{
 		return pressKeyD_;
 	}
+	if (Novice::CheckHitKey(DIK_A))
+	{
+		return pressKeyA_;
+	}
 	return nullptr;
 }
 
-void ImputHandler::AssignMoveLeftCommand2PlesskeyA()
+void InputHandler::AssignMoveLeftCommand2PlesskeyA()
 {
 	ICommand* command = new MoveLeftCommand();
 	pressKeyA_ = command;
 }
 
-void ImputHandler::AssignMoveRightCommand2PlesskeyD()
+void InputHandler::AssignMoveRightCommand2PlesskeyD()
 {
 	ICommand* command = new MoveRightCommand();
 	pressKeyD_ = command;

@@ -26,7 +26,7 @@
     <ClCompile Include="Command.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="ImputHandler.cpp">
+    <ClCompile Include="InputHandler.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -114,6 +114,6 @@
     </ClInclude>
     <ClInclude Include="Player.h" />
     <ClInclude Include="Command.h" />
-    <ClInclude Include="ImputHandler.h" />
+    <ClInclude Include="InputHandler.h" />
   </ItemGroup>
 </Project>

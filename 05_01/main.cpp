@@ -1,5 +1,8 @@
 #include <Novice.h>
 
+#include "Player.h"
+#include "InputHandler.h"
+#include "Command.h"
 const char kWindowTitle[] = "学籍番号";
 
 // Windowsアプリでのエントリーポイント(main関数)
@@ -12,6 +15,13 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 	char keys[256] = {0};
 	char preKeys[256] = {0};
 
+	InputHandler* inputHandler=nullptr;
+	inputHandler=new InputHandler();
+	inputHandler->AssignMoveLeftCommand2PlesskeyA();
+	inputHandler->AssignMoveRightCommand2PlesskeyD();
+	ICommand*iCommand=nullptr;
+	Player*player=nullptr;
+	player=new Player();
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
 		// フレームの開始
@@ -24,7 +34,12 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 		///
 		/// ↓更新処理ここから
 		///
-
+		iCommand=inputHandler->HandleInput();
+		if (iCommand)
+		{
+			iCommand->Exec(*player);
+		}
+		player->Update();
 		///
 		/// ↑更新処理ここまで
 		///
@@ -32,7 +47,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 		///
 		/// ↓描画処理ここから
 		///
-
+		player->Draw();
 		///
 		/// ↑描画処理ここまで
 		///
@@ -45,6 +60,13 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 			break;
 		}
 	}
+
+	delete player;
+	if (iCommand)
+	{
+		delete iCommand;
+	}
+	delete inputHandler;
 
 	// ライブラリの終了
 	Novice::Finalize();
