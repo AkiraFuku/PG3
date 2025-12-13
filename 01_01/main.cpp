@@ -17,9 +17,9 @@ void Draw(list<const char*> stations) {
 /// <summary>
 /// 指定した位置に駅名をリストに挿入します。
 /// </summary>
-/// <param name="stations">駅名（const char*）のリストへの参照。挿入先となります。</param>
-/// <param name="stationName">挿入する駅名（const char*）。</param>
-/// <param name="pos">挿入位置を示すインデックス（0始まり）。</param>
+/// <param name="stations">駅名(const char*)のリストへの参照。挿入先となります。</param>
+/// <param name="stationName">挿入する駅名(const char*)。</param>
+/// <param name="pos">挿入位置を示すインデックス(0始まり)。</param>
 void Input(list<const char*>& stations, const char* stationName, int pos) {
 
 
