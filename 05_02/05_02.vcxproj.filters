@@ -29,6 +29,9 @@
     <ClCompile Include="Selector.cpp">
       <Filter>Commands\StageScene</Filter>
     </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -118,5 +121,6 @@
     <ClInclude Include="Selector.h">
       <Filter>Commands\StageScene</Filter>
     </ClInclude>
+    <ClInclude Include="Unit.h" />
   </ItemGroup>
 </Project>
