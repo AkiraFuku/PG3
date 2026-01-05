@@ -30,7 +30,10 @@
       <Filter>Commands\StageScene</Filter>
     </ClCompile>
     <ClCompile Include="Unit.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>Commands\StageScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectorCommand.cpp">
+      <Filter>KamataEngine\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +124,11 @@
     <ClInclude Include="Selector.h">
       <Filter>Commands\StageScene</Filter>
     </ClInclude>
-    <ClInclude Include="Unit.h" />
+    <ClInclude Include="Unit.h">
+      <Filter>Commands\StageScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectorCommand.h">
+      <Filter>Commands\StageScene</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
