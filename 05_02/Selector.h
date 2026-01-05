@@ -8,6 +8,7 @@ private:
 	int mapY_;
 	int mapSize_;
 	int selectMode_;
+	int size_=30;
 
 	Unit* unit_;
 	Unit* selectedUnit_;
@@ -20,5 +21,9 @@ public:
 
 	void Move(int x,int y);
 	void SelectUnit();
+
+	Unit* GetUnitList(){return unit_;};
+	void SetUnitList(Unit* unit){unit_=unit;};
+
 };
 

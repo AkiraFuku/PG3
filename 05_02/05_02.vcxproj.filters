@@ -33,7 +33,19 @@
       <Filter>Commands\StageScene</Filter>
     </ClCompile>
     <ClCompile Include="SelectorCommand.cpp">
-      <Filter>KamataEngine\Source</Filter>
+      <Filter>Commands\StageScene</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitCommand.cpp">
+      <Filter>Commands\StageScene</Filter>
+    </ClCompile>
+    <ClCompile Include="IScene.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="StageSceneInputHandler.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="StageScene.cpp">
+      <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,5 +142,11 @@
     <ClInclude Include="SelectorCommand.h">
       <Filter>Commands\StageScene</Filter>
     </ClInclude>
+    <ClInclude Include="UnitCommand.h">
+      <Filter>Commands\StageScene</Filter>
+    </ClInclude>
+    <ClInclude Include="IScene.h" />
+    <ClInclude Include="StageSceneInputHandler.h" />
+    <ClInclude Include="StageScene.h" />
   </ItemGroup>
 </Project>

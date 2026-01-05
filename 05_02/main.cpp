@@ -1,8 +1,6 @@
 #include <Novice.h>
 
-#include "Player.h"
-#include "InputHandler.h"
-#include "Command.h"
+#include "StageScene.h"
 const char kWindowTitle[] = "学籍番号";
 
 // Windowsアプリでのエントリーポイント(main関数)
@@ -16,6 +14,10 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 	char preKeys[256] = {0};
 
 
+	StageScene* stage=nullptr;
+	stage=new StageScene();
+	stage->Init();
+
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
 		// フレームの開始
@@ -28,7 +30,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 		///
 		/// ↓更新処理ここから
 		///
-		
+		stage->Update();
 		///
 		/// ↑更新処理ここまで
 		///
@@ -36,7 +38,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 		///
 		/// ↓描画処理ここから
 		///
-		
+		stage->Draw();
 		///
 		/// ↑描画処理ここまで
 		///
@@ -49,7 +51,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 			break;
 		}
 	}
-
+	delete stage;
 
 	// ライブラリの終了
 	Novice::Finalize();

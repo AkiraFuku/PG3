@@ -7,7 +7,7 @@ public :
 	SelectorMoveCommand(Selector* selector,int x,int y);
 	void Exec()override;
 private:
-	Selector* selector;
+	Selector* selector_;
 	int x_;
 	int y_;
 
@@ -18,6 +18,6 @@ public:
 	SelectUnitCommand(Selector* selector);
 	void Exec()override;
 private:
-	Selector* selector;
+	Selector* selector_;
 };
 
