@@ -14,14 +14,20 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Commands">
+      <UniqueIdentifier>{f4bf06b3-9a59-4d6d-81e1-3922e1d54c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\StageScene">
+      <UniqueIdentifier>{66b835d9-0a89-43dc-92e8-205b94e6bd53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
       <Filter>KamataEngine\Adapter</Filter>
     </ClCompile>
-    <ClCompile Include="IStageSceneCommand.cpp">
-      <Filter>KamataEngine</Filter>
+    <ClCompile Include="Selector.cpp">
+      <Filter>Commands\StageScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +112,11 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
-    <ClInclude Include="IStageSceneCommand.h" />
+    <ClInclude Include="IStageSceneCommand.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Selector.h">
+      <Filter>Commands\StageScene</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
