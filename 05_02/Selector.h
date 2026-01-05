@@ -6,9 +6,9 @@ class Selector
 private:
 	int mapX_;
 	int mapY_;
-	int mapSize_;
+	int mapSize_=30;
 	int selectMode_;
-	int size_=30;
+	
 
 	Unit* unit_;
 	Unit* selectedUnit_;
