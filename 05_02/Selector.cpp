@@ -36,6 +36,7 @@ void Selector::SelectUnit()
 		// ※Unit側に座標取得ゲッターが必要
 		if (unit_[i].GetMapX() == mapX_ && unit_[i].GetMapY() == mapY_)
 		{
+			unit_[i].SetSelected(true);
 			// 4. 一致したら、そのユニットのアドレス(&)を代入
 			selectedUnit_ = &unit_[i];
 			

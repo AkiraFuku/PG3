@@ -23,5 +23,9 @@ public:
 	int GetMapY() const {
 		return mapY_;
 	}
+
+	void SetSelected(bool selected ){IsSelected_=selected;}
+
+	bool selected(){return IsSelected_;}
 };
 

@@ -7,8 +7,9 @@ void Unit::Init(int idref){
 void Unit::Update(){};
 void Unit::Draw(){};
 void Unit::Move(int x,int y){
-
-	x,y;
+	mapX_+=x;
+	mapY_+=y;
+	
 };
 void Unit::MoveEnd(Selector* selector){
 selector;
