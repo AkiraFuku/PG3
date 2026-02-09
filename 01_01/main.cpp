@@ -38,7 +38,7 @@ int main() {
 	Input(stations,"Nisi-Nippori", 8);
 	printf("2019\n");
 	Draw(stations);
-	Input(stations, "Takanawa Gatway", 26);
+	Input(stations, "Takanawa Gateway", 26);
 	printf("2022\n");
 	Draw(stations);
 
