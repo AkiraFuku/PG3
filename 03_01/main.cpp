@@ -8,11 +8,8 @@
 
 
 int main(int argc,const char * argv[]){
-	/*int modeResult = _setmode(_fileno(stdout), _O_U16TEXT);
-	if (modeResult == -1) {
-		fwprintf(stderr, L"_setmode に失敗しました。\n");
-		return 1;
-	}*/
+	 SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 	Enemy enemy;
 	enemy.initialize();
 	for (int i = 0; i < 3; ++i)

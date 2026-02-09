@@ -18,17 +18,11 @@ void Enemy::update()
 	if (phase_!=state::leave)
 	{
 		phase_ = static_cast<state>((static_cast<size_t>(phase_) + 1));
-	} else
-	{
-		return;
-	}
+		
+		const char* stateNames[] = { "Approach", "Shoot", "leave" };
 
-	
-
-	
-	const char* stateNames[] = { "Approach", "Shoot", "leave" };
-
-	printf("次の行動は%S\n", stateNames[static_cast<size_t>(phase_)] );
+	printf("次の行動は%s\n", stateNames[static_cast<size_t>(phase_)] );
+	} 
 }
 
 void Enemy::Approach(){	
