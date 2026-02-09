@@ -22,10 +22,11 @@ void Draw(list<const char*> stations) {
 /// <param name="pos">挿入位置を示すインデックス（0始まり）。</param>
 void Input(list<const char*>& stations,const char* stationName,int pos) {
 
-	
 	auto it = stations.begin();
-	for (int i = 0; i < pos-1 && it != stations.end(); i++, it++);
-	stations.insert(it, stationName);
+    for (int i = 0; i < pos - 1 && it != stations.end(); i++) {
+        it++;
+    }
+    stations.insert(it, stationName);
 
 	
 }
