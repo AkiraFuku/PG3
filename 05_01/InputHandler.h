@@ -3,6 +3,7 @@
 class InputHandler
 {
 public:
+	~InputHandler();
 	ICommand*HandleInput();
 	void AssignMoveLeftCommand2PlesskeyA();
 	void AssignMoveRightCommand2PlesskeyD();
