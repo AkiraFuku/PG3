@@ -1,5 +1,10 @@
 #include "InputHandler.h"
 #include "Novice.h"
+InputHandler::~InputHandler()
+{
+	delete pressKeyA_;
+	delete pressKeyD_;
+}
 ICommand* InputHandler::HandleInput()
 {
 	if (Novice::CheckHitKey(DIK_D))

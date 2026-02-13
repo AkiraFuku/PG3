@@ -6,7 +6,7 @@ public:
 		T1 a;
 		T2 b;
 		Compare(T1 first, T2 second) : a(first), b(second) {}
-		T1 min()
+		T1 Min()
 		{
 			return (a < b) ? a : b;
 		}
